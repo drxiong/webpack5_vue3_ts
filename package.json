@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --config build/webpack.config.js",
-    "build": "webpack --config build/webpack.config.js",
+    "start": "webpack serve --mode=development --config ./build/webpack.config.js",
+    "build": "webpack --mode=production --config ./build/webpack.config.js",
     "prepare": "husky install"
   },
   "repository": {
@@ -42,8 +42,13 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "@vue/compiler-sfc": "^3.2.33",
+    "axios": "^0.27.2",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^3.4.1",
+    "element-plus": "^2.2.1",
     "eslint-config-prettier": "^8.5.0",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
@@ -53,7 +58,13 @@
     "lint-staged": "^12.4.1",
     "mini-css-extract-plugin": "^2.6.0",
     "style-loader": "^3.3.1",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.6.4",
     "url-loader": "^4.1.1",
-    "webpack-dev-server": "^4.9.0"
+    "vue": "^3.2.33",
+    "vue-loader": "^17.0.0",
+    "vue-router": "^4.0.13",
+    "webpack-dev-server": "^4.9.0",
+    "webpack-merge": "^5.8.0"
   }
 }
