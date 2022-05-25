@@ -10,7 +10,7 @@
     "experimentalDecorators": true,
     "esModuleInterop": true,  // 允许export=导出，由import from 导入
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true,  //生成目标文件的sourceMap文化
+    "sourceMap": false,  //生成目标文件的sourceMap文化
     "baseUrl": ".", // 解析非相对模块的基地址，默认是当前目录
     "allowJs": false, // 是否允许编译器编译JS，JSX文件
     // "noEmit": true, // 不输出文件,即编译后不会生成任何js文件

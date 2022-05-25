@@ -22,11 +22,14 @@ module.exports = {
       {
         test: /\.vue?$/,
         use: 'vue-loader',
+        include: /src/,
         exclude: /node_modules/
       },
       {
         test: /\.jsx?$/,
-        use: 'babel-loader'
+        use: 'babel-loader',
+        include: /src/,
+        exclude: /node_modules/
       },
       {
         test: /\.tsx?$/,
@@ -38,6 +41,7 @@ module.exports = {
             }
           }
         ],
+        include: /src/,
         exclude: /node_modules/
       },
       {
@@ -47,10 +51,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader // 用MiniCssExtractPlugin.loader代替style-loader,可以让打包后的css文件独立出来
           },
           {
-            loader: 'css-loader',
-            // options: {
-            //   modules: true
-            // }
+            loader: 'css-loader'
           },
           'postcss-loader'
         ]

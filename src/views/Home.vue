@@ -5,6 +5,7 @@
   </div>
 </template>
 <script lang="ts" setup>
+import { login } from '@/api/index'
 interface MyType{
   name: String,
   age: Number
@@ -14,4 +15,17 @@ const person: MyType={
   age: 43
 }
 let str: string = "12"
+
+const Login = async () => {
+  const data = await login({
+    username: 'xiongyan',
+    password: '123456'
+  })
+  if(data){
+    console.log('登陆成功')
+  }
+}
+
+// Login()
+
 </script>
